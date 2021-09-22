@@ -1,7 +1,4 @@
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-        assert_eq!(2 + 2, 4);
-    }
-}
+mod domain;
+
+pub use domain::SqsEvent;
+pub use lambda_runtime::*;
