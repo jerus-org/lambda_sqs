@@ -42,16 +42,21 @@ impl SqsEvent {
     ///
     /// # Example
     /// ``` no_run
+    /// # type MyType = Vec<String>;
+    /// # use lambda_sqs::{SqsEvent, Context};
+    /// #
+    /// # fn handler(sqs_events:SqsEvent, c: Context) {
     /// let my_events: MyType = sqs_events.into_t();
+    /// # }
     /// ```
     pub fn into_t<T>(self) -> Vec<T>
     where
-    T: DeserializeOwned + Default,
+        T: DeserializeOwned + Default,
     {
         self.records
-        .into_iter()
-        .map(move |message| serde_json::from_str(&message.as_string()).unwrap_or_default())
-        .collect()
+            .into_iter()
+            .map(move |message| serde_json::from_str(&message.as_string()).unwrap_or_default())
+            .collect()
     }
 }
 

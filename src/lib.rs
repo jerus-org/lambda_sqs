@@ -16,7 +16,7 @@
 //!
 //! # Example
 //! ```no_run
-//! use your_module::YourStruct;
+//! # type YourStruct = String;
 //! use lambda_sqs::{handler_fn, Context, Error};
 //! use lambda_sqs::SqsEvent;
 //!
@@ -27,7 +27,7 @@
 //!     Ok(())
 //! }
 //!
-//! pub async fn my_handler(e: SqsEvent, c: Context) -> Result<(), Error> {
+//! async fn my_handler(e: SqsEvent, c: Context) -> Result<(), Error> {
 //!     let events: Vec<YourStruct> = e.into_t();
 //!#     // Process events
 //!#     Ok(())
