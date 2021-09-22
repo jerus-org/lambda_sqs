@@ -18,8 +18,8 @@
 [actions-url]: https://github.com/jerusdp/lambda_sqs/actions/workflows/general.yml
 [version-badge]: https://img.shields.io/badge/rust-1.46+-orange.svg
 [version-url]: https://www.rust-lang.org
-[fossa-badge]: https://app.fossa.com/api/projects/custom%2B22707%2Fgithub.com%2Fjerusdp%2Flambda_sqs.svg?type=shield
-[fossa-url]: https://app.fossa.com/projects/custom%2B22707%2Fgithub.com%2Fjerusdp%2Flambda_sqs?ref=badge_shield
+[fossa-badge]: https://app.fossa.com/api/projects/custom%2B22707%2Fgit%40github.com%3Ajerusdp%2Flambda_sqs.git.svg?type=shield
+[fossa-url]: https://app.fossa.com/projects/custom%2B22707%2Fgit%40github.com%3Ajerusdp%2Flambda_sqs.git?ref=badge_shield
 [docs-badge]:  https://docs.rs/lambda_sqs/badge.svg
 [docs-url]:  https://docs.rs/lambda_sqs
 [bmac-badge]: https://badgen.net/badge/icon/buymeacoffee?color=yellow&icon=buymeacoffee&label
