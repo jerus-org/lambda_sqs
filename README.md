@@ -34,7 +34,7 @@ Specialised lambda_runtime to accept and process events from SQS.
 SQS dispatches events to the a lambda function in batches (often, it seems
 to my surprise). This crate provides a lambda_runtime implementation which
 expects to receive a batch of messages in the [SqsEvent] type and provides
-a method to transform the batch of events to a vector of your Struct.
+a method to transform the batch of events to a vec of your Struct.
 
 ## Example
 
