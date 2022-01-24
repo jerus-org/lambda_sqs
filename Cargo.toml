@@ -12,6 +12,17 @@ readme = "README.md"
 documentation = "https://docs.rs/lambda-sqs"
 categories = ["web-programming"]
 keywords = ["aws", "sqs", "lambda"]
+exclude = [
+    ".fossa.yml",
+    ".github/workflows/fossa.yml",
+    ".github/workflows/general.yml",
+    ".github/workflows/rust_security_audit.yml",
+    ".gitignore",
+    ".vscode/settings.json",
+    ".whitesource",
+    "markdownlint.jsonc",
+    "renovate.json"
+]
 
 [dependencies]
 serde = { version = "1.0.135", features = ["derive"] }
@@ -24,3 +35,4 @@ tokio = "1"
 [package.metadata.docs.rs]
 all-features = true
 rustdoc-args = ["--cfg", "docsrs"]
+
