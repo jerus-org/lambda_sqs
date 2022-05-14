@@ -3,5 +3,8 @@
         "contrib",
         "rustdoc",
         "Struct"
+    ],
+    "conventionalCommits.scopes": [
+        "Release Management"
     ]
 }

@@ -31,10 +31,19 @@ Specialised lambda_runtime to accept and process events from SQS.
 
 ## SQS Events
 
-SQS dispatches events to the a lambda function in batches (often, it seems
-to my surprise). This crate provides a lambda_runtime implementation which
-expects to receive a batch of messages in the [SqsEvent] type and provides
+SQS dispatches events to a lambda function in batches (often, it seems
+to my surprise). This crate provides a lambda_runtime implementation that
+expects to receive a batch of messages in the[SqsEvent] type and provides
 a method to transform the batch of events to a vec of your Struct.
+
+# Usage
+
+To use the crate add the dependency in Cargo.toml.
+
+```toml
+[dependencies]
+lambda_sqs = "0.2.1"
+```
 
 ## Example
 

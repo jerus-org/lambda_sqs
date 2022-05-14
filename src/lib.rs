@@ -15,6 +15,14 @@
 //! a method to transform the batch of events to a vector of your Struct.
 //!
 //! # Example
+//!
+//! In Cargo.toml add lambda_sqs as a dependency.
+//!
+//! ```toml
+//! [dependencies]
+//! lambda_sqs = "0.2.1"
+//! ```
+//!
 //! ```no_run
 //! # type YourStruct = String;
 //! use lambda_sqs::{handler_fn, Context, Error};
