@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased] - ReleaseDate
 
+## [0.2.2] - 2022-05-14
+
 ### Add
 
 - Return a vec of messages
@@ -33,6 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Convert batch of messages to vec of user provider struct
 
 <!-- next-url -->
-[Unreleased]: https://github.com/olivierlacan/keep-a-changelog/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/assert-rs/predicates-rs/compare/v0.2.2...HEAD
+[0.2.2]: https://github.com/olivierlacan/keep-a-changelog/compare/v1.0.0...v0.2.2
 [0.2.1]: https://github.com/olivierlacan/keep-a-changelog/releases/tag/v0.2.1
 [0.2.0]: https://github.com/olivierlacan/keep-a-changelog/releases/tag/v0.2.0
