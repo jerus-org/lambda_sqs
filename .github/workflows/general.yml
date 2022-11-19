@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 env:
   CARGO_TERM_COLOR: always
-  minrust: 1.49.0
+  minrust: 1.56.0
 
 jobs:
   test:
@@ -82,7 +82,6 @@ jobs:
         env:
           RUSTDOCFLAGS: --cfg docsrs -Dwarnings
 
-
   coverage:
     name: Code coverage
     runs-on: ubuntu-latest
@@ -99,4 +98,4 @@ jobs:
         uses: actions-rs/tarpaulin@v0.1
         with:
           version: "0.16.0"
-          args: '--ignore-tests --all-features'
+          args: "--ignore-tests --all-features"
