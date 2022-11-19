@@ -4,7 +4,7 @@
 [![Crates.io][crates-badge]][crates-url]
 [![MIT licensed][mit-badge]][mit-url]
 [![Build Status][actions-badge]][actions-url]
-[![Rust 1.49+][version-badge]][version-url]
+[![Rust 1.56+][version-badge]][version-url]
 [![FOSSA Status][fossa-badge]][fossa-url]
 [![Docs][docs-badge]][docs-url]
 [![BuyMeaCoffee][bmac-badge]][bmac-url]
@@ -16,7 +16,7 @@
 [mit-url]: https://github.com/jerusdp/lambda_sqs/blob/main/LICENSE
 [actions-badge]: https://github.com/jerusdp/lambda_sqs/actions/workflows/general.yml/badge.svg?branch=main
 [actions-url]: https://github.com/jerusdp/lambda_sqs/actions/workflows/general.yml
-[version-badge]: https://img.shields.io/badge/rust-1.46+-orange.svg
+[version-badge]: https://img.shields.io/badge/rust-1.56+-orange.svg
 [version-url]: https://www.rust-lang.org
 [fossa-badge]: https://app.fossa.com/api/projects/custom%2B22707%2Fgit%40github.com%3Ajerusdp%2Flambda_sqs.git.svg?type=shield
 [fossa-url]: https://app.fossa.com/projects/custom%2B22707%2Fgit%40github.com%3Ajerusdp%2Flambda_sqs.git?ref=badge_shield
@@ -42,7 +42,7 @@ To use the crate add the dependency in Cargo.toml.
 
 ```toml
 [dependencies]
-lambda_sqs = " {0.2.3"
+lambda_sqs = "0.2.3"
 ```
 
 ## Example
