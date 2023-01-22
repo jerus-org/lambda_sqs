@@ -10,9 +10,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased] - ReleaseDate
 
+### Bug Fixes
+
+- Update rust crate lambda_runtime to 0.7.3
+
+### Documentation
+
+- Enable missing doc check feature on nightly
+
+### Ci
+
+- Minrust and typo
+
 ## [0.2.3] - 2022-05-14
 
+### Change
+
+- Update dependencies
+
 ## [0.2.2] - 2022-05-14
+
+### Change
+
+- Update dependencies
 
 ### Add
 
