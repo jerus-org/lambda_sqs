@@ -10,6 +10,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased] - ReleaseDate
 
+### Ci
+
+- Migrate to circleci
+
+
 ## [0.2.4] - 2023-01-22
 
 ### Bug Fixes

@@ -13,15 +13,15 @@ documentation = "https://docs.rs/lambda-sqs"
 categories = ["web-programming"]
 keywords = ["aws", "sqs", "lambda"]
 exclude = [
+    ".circleci/config.yml",
     ".fossa.yml",
     ".github/workflows/fossa.yml",
-    ".github/workflows/general.yml",
     ".github/workflows/rust_security_audit.yml",
     ".gitignore",
     ".vscode/settings.json",
     ".whitesource",
     "markdownlint.jsonc",
-    "renovate.json"
+    "renovate.json",
 ]
 
 [dependencies]
@@ -35,4 +35,3 @@ tokio = "1"
 [package.metadata.docs.rs]
 all-features = true
 rustdoc-args = ["--cfg", "docsrs"]
-
