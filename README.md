@@ -70,8 +70,8 @@ dual licensed as above, without any additional terms or conditions.
 [crates-url]: https://crates.io/crates/lambda_sqs
 [mit-badge]: https://img.shields.io/badge/license-MIT-blue.svg
 [mit-url]: https://github.com/jerusdp/lambda_sqs/blob/main/LICENSE
-[circleci-badge]: https://circleci.com/gh/jerusdp/lambda-sqs/tree/main.svg?style=svg
-[circleci-url]: https://circleci.com/gh/jerusdp/lambda-sqs/tree/main
+[circleci-badge]: https://dl.circleci.com/status-badge/img/gh/jerusdp/lambda_sqs/tree/main.svg?style=svg
+[circleci-url]: https://dl.circleci.com/status-badge/redirect/gh/jerusdp/lambda_sqs/tree/main
 [version-badge]: https://img.shields.io/badge/rust-1.61+-orange.svg
 [version-url]: https://www.rust-lang.org
 [fossa-badge]: https://app.fossa.com/api/projects/custom%2B22707%2Fgit%40github.com%3Ajerusdp%2Flambda_sqs.git.svg?type=shield
