@@ -72,7 +72,7 @@ dual licensed as above, without any additional terms or conditions.
 [mit-url]: https://github.com/jerusdp/lambda_sqs/blob/main/LICENSE
 [circleci-badge]: https://circleci.com/gh/jerusdp/lambda-sqs/tree/main.svg?style=svg
 [circleci-url]: https://circleci.com/gh/jerusdp/lambda-sqs/tree/main
-[version-badge]: https://img.shields.io/badge/rust-1.56+-orange.svg
+[version-badge]: https://img.shields.io/badge/rust-1.61+-orange.svg
 [version-url]: https://www.rust-lang.org
 [fossa-badge]: https://app.fossa.com/api/projects/custom%2B22707%2Fgit%40github.com%3Ajerusdp%2Flambda_sqs.git.svg?type=shield
 [fossa-url]: https://app.fossa.com/projects/custom%2B22707%2Fgit%40github.com%3Ajerusdp%2Flambda_sqs.git?ref=badge_shield
