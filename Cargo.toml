@@ -25,7 +25,7 @@ exclude = [
 ]
 
 [dependencies]
-serde = { version = "1.0.199", features = ["derive"] }
+serde = { version = "1.0.200", features = ["derive"] }
 serde_json = "1.0.116"
 lambda_runtime = "0.11.1"
 
