@@ -4,6 +4,12 @@ parameters:
   min-rust-version:
     type: string
     default: "1.65"
+  fingerprint:
+    type: string
+    default: SHA256:OkxsH8Z6Iim6WDJBaII9eTT9aaO1f3eDc6IpsgYYPVg
+
+orbs:
+  toolkit: jerusdp/circleci-toolkit@0.9.4
 
 executors:
   rust-env:
@@ -43,23 +49,6 @@ jobs:
       - cargo-build:
           rust-version: "beta"
 
-  basic-test:
-    executor: rust-env
-    steps:
-      - checkout
-      - run: cargo --version
-      - run:
-          name: Check formatting for code
-          command: |
-            rustfmt --version
-            cargo fmt --all -- --check
-      - run:
-          name: Check idiomatic code use with Clippy
-          command: "cargo clippy --all --tests --all-features -- -D warnings"
-      - run:
-          name: Test crate with no features specified
-          command: "cargo test"
-
   docs:
     executor: rust-env
     environment:
@@ -71,41 +60,6 @@ jobs:
           command: |
             cargo +nightly doc --lib --no-deps --all-features --document-private-items
 
-  release-ready:
-    executor: rust-env
-    steps:
-      - checkout
-      - run:
-          name: Check if ready to make a release
-          command: |
-            set -eo pipefail
-
-            if [ "$(nextsv -q)" != "none" ]
-            then
-              exit 0
-            else 
-             exit 1
-            fi
-
-  make-release:
-    executor: rust-env
-    steps:
-      - add_ssh_keys:
-          fingerprints:
-            - $SSH_FINGERPRINT
-      - checkout
-      - run:
-          name: Configure git for user and signing
-          command: |
-            git config --global user.email "$USER_EMAIL"
-            git config --global user.name "$USER_NAME"
-            git config --global gpg.format ssh
-            git config --global user.signingKey "$SSH_PUB"
-            git config --local --list
-      - run:
-          name: Publish update
-          command: |
-            cargo release -vv --registry spare --execute --no-confirm "$(nextsv -vv -e feature -r 'CHANGES.md' -r 'CHANGELOG.md')"
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
@@ -115,16 +69,26 @@ workflows:
         equal: [scheduled_pipeline, << pipeline.trigger_source >>]
     jobs:
       - required-builds
-      - basic-test
       - docs
       - optional-builds
+      - toolkit/common_tests
+      - toolkit/idiomatic_rust
+      - toolkit/update_changelog:
+          requires:
+            - required-builds
+            - toolkit/common_tests
+            - toolkit/idiomatic_rust
+          context:
+            - release
+          ssh_fingerprint: << pipeline.parameters.fingerprint >>
+
   release:
     when:
       and:
         - equal: [scheduled_pipeline, << pipeline.trigger_source >>]
         - equal: ["release check", << pipeline.schedule.name >>]
     jobs:
-      - release-ready
-      - make-release:
-          requires:
-            - release-ready
+      - toolkit/make_release:
+          context:
+            - release
+          ssh_fingerprint: << pipeline.parameters.fingerprint >>
