@@ -88,4 +88,7 @@ workflows:
         - equal: [scheduled_pipeline, << pipeline.trigger_source >>]
         - equal: ["release check", << pipeline.schedule.name >>]
     jobs:
-      - toolkit/make_release
+      - toolkit/make_release:
+          context:
+            - release
+          ssh_fingerprint: << pipeline.parameters.fingerprint >>
