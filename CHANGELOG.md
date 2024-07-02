@@ -35,14 +35,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Return a vec of messages
 
-## [0.2.1] - 24-01-2022
+## [0.2.1] - 2022-01-24
 
 ### Changed
 
 - FIX: error in repository string
 - Update dependences
 
-## [0.2.0] - 22-09-2021
+## [0.2.0] - 2021-09-22
 
 ### Added
 
