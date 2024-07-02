@@ -4,6 +4,9 @@ parameters:
   min-rust-version:
     type: string
     default: "1.65"
+  fingerprint:
+    type: string
+    default: SHA256:OkxsH8Z6Iim6WDJBaII9eTT9aaO1f3eDc6IpsgYYPVg
 
 orbs:
   toolkit: jerusdp/circleci-toolkit@0.9.4
@@ -71,12 +74,13 @@ workflows:
       - toolkit/common_tests
       - toolkit/idiomatic_rust
       - toolkit/update_changelog:
-          ssh_fingerprint:
-            - SHA256:OkxsH8Z6Iim6WDJBaII9eTT9aaO1f3eDc6IpsgYYPVg
           requires:
             - required-builds
             - toolkit/common_tests
             - toolkit/idiomatic_rust
+          context:
+            - release
+          ssh_fingerprint: << pipeline.parameters.fingerprint >>
 
   release:
     when:
