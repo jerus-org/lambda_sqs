@@ -71,6 +71,8 @@ workflows:
       - toolkit/common_tests
       - toolkit/idiomatic_rust
       - toolkit/update_changelog:
+          ssh_fingerprints:
+            - SHA256:OkxsH8Z6Iim6WDJBaII9eTT9aaO1f3eDc6IpsgYYPVg
           requires:
             - required-builds
             - toolkit/common_tests
