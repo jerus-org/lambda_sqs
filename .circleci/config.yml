@@ -70,6 +70,12 @@ workflows:
       - optional-builds
       - toolkit/common_tests
       - toolkit/idiomatic_rust
+      - toolkit/update_changelog:
+          requires:
+            - required-builds
+            - toolkit/common_tests
+            - toolkit/idiomatic_rust
+
   release:
     when:
       and:
