@@ -13,10 +13,7 @@ impl SqsMessage {
     }
 
     fn as_string(&self) -> String {
-        match self.body.clone() {
-            Some(s) => s,
-            None => String::new(),
-        }
+        self.body.clone().unwrap_or_default()
     }
 }
 
