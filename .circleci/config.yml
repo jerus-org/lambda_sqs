@@ -71,8 +71,10 @@ workflows:
       - required-builds
       - docs
       - optional-builds
-      - toolkit/common_tests
-      - toolkit/idiomatic_rust
+      - toolkit/common_tests:
+          min_rust_version: << pipeline.parameters.min-rust-version >>
+      - toolkit/idiomatic_rust:
+          min_rust_version: << pipeline.parameters.min-rust-version >>
       - toolkit/update_changelog:
           requires:
             - required-builds
@@ -81,6 +83,7 @@ workflows:
           context:
             - release
           ssh_fingerprint: << pipeline.parameters.fingerprint >>
+          min_rust_version: << pipeline.parameters.min-rust-version >>
 
   release:
     when:
