@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Migrate to circleci
 - Enable missing doc check feature on nightly
 - Minrust and typo
+- chore-migrate to jerus-org(pr [#40])
 
 ### Security
 
@@ -54,9 +55,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Convert batch of messages to vec of user provider struct
 
 [#39]: https://github.com/jerusdp/lambda_sqs/pull/39
-[Unreleased]: https://github.com/jerusdp/lambda_sqs/compare/0.2.4...HEAD
-[0.2.4]: https://github.com/jerusdp/lambda_sqs/compare/0.2.3...0.2.4
-[0.2.3]: https://github.com/jerusdp/lambda_sqs/compare/0.2.2...0.2.3
-[0.2.2]: https://github.com/jerusdp/lambda_sqs/compare/0.2.1...0.2.2
-[0.2.1]: https://github.com/jerusdp/lambda_sqs/compare/0.2.0...0.2.1
-[0.2.0]: https://github.com/jerusdp/lambda_sqs/releases/tag/0.2.0
+[#40]: https://github.com/jerus-org/lambda_sqs/pull/40
+[Unreleased]: https://github.com/jerus-org/lambda_sqs/compare/0.2.4...HEAD
+[0.2.4]: https://github.com/jerus-org/lambda_sqs/compare/0.2.3...0.2.4
+[0.2.3]: https://github.com/jerus-org/lambda_sqs/compare/0.2.2...0.2.3
+[0.2.2]: https://github.com/jerus-org/lambda_sqs/compare/0.2.1...0.2.2
+[0.2.1]: https://github.com/jerus-org/lambda_sqs/compare/0.2.0...0.2.1
+[0.2.0]: https://github.com/jerus-org/lambda_sqs/releases/tag/0.2.0
