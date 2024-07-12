@@ -4,10 +4,10 @@ version = "0.2.4"
 description = """
 Handles an SQS event and provides a vec of your type for processing. 
 """
-edition = "2018"
+edition = "2021"
 authors = ["Jeremiah Russell <jrussell@jerus.ie>"]
 license = "MIT OR Apache-2.0"
-repository = "https://github.com/jerusdp/lambda_sqs"
+repository = "https://github.com/jerus-org/lambda_sqs"
 readme = "README.md"
 documentation = "https://docs.rs/lambda-sqs"
 categories = ["web-programming"]
