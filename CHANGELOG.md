@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - chore-migrate to jerus-org(pr [#40])
 - ci-upgrade jerus-org/circleci-toolkit from 0.20.0 to 0.21.0(pr [#41])
 - ci-adopt all features of the toolkit and remove custom commands and jobs(pr [#42])
+- ci-update jerus-org/circleci-toolkit version from 0.21.0 to 0.22.0(pr [#43])
 
 ### Security
 
@@ -60,6 +61,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#40]: https://github.com/jerus-org/lambda_sqs/pull/40
 [#41]: https://github.com/jerus-org/lambda_sqs/pull/41
 [#42]: https://github.com/jerus-org/lambda_sqs/pull/42
+[#43]: https://github.com/jerus-org/lambda_sqs/pull/43
 [Unreleased]: https://github.com/jerus-org/lambda_sqs/compare/0.2.4...HEAD
 [0.2.4]: https://github.com/jerus-org/lambda_sqs/compare/0.2.3...0.2.4
 [0.2.3]: https://github.com/jerus-org/lambda_sqs/compare/0.2.2...0.2.3
