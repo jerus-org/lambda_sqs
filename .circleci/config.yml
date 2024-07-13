@@ -46,7 +46,8 @@ workflows:
         - not: << pipeline.parameters.success-flag >>
         - << pipeline.parameters.validation-flag >>
     jobs:
-      - toolkit/required_builds
+      - toolkit/required_builds:
+          min_rust_version: << pipeline.parameters.min-rust-version >>
       - toolkit/test_doc_build
       - toolkit/optional_builds
       - toolkit/common_tests:
