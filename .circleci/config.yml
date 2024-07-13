@@ -7,6 +7,14 @@ parameters:
   fingerprint:
     type: string
     default: SHA256:OkxsH8Z6Iim6WDJBaII9eTT9aaO1f3eDc6IpsgYYPVg
+  validation-flag:
+    type: boolean
+    default: false
+    description: "If true, the validation pipeline will be executed."
+  success-flag:
+    type: boolean
+    default: false
+    description: "If true, the success pipeline will be executed."
 
 orbs:
   toolkit: jerus-org/circleci-toolkit@0.21.0
@@ -16,68 +24,38 @@ executors:
     docker:
       - image: jerusdp/ci-rust:<<pipeline.parameters.min-rust-version>>
 
-commands:
-  cargo-build:
-    parameters:
-      rust-version:
-        default: "stable"
-        type: string
-    steps:
-      - run:
-          name: Update Rust and check build <<parameters.rust-version>>
-          command: |
-            cargo +<<parameters.rust-version>> check --all-features
-
-jobs:
-  required-builds:
-    executor: rust-env
-    steps:
-      - checkout
-      - run: cargo --version
-      - cargo-build:
-          rust-version: "stable"
-      - cargo-build:
-          rust-version: "<<pipeline.parameters.min-rust-version>>"
-
-  optional-builds:
-    executor: rust-env
-    steps:
-      - checkout
-      - run: cargo --version
-      - cargo-build:
-          rust-version: "nightly"
-      - cargo-build:
-          rust-version: "beta"
-
-  docs:
-    executor: rust-env
-    environment:
-      RUSTDOCFLAGS: --cfg docsrs -Dwarnings
-    steps:
-      - checkout
-      - run:
-          name: Test generation of all of the documentation for the crate
-          command: |
-            cargo +nightly doc --lib --no-deps --all-features --document-private-items
-
-# Invoke jobs via workflows
-# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
+  check_last_commit:
+    when:
+      and:
+        - not:
+            equal: [scheduled_pipeline, << pipeline.trigger_source >>]
+        - not: << pipeline.parameters.success-flag >>
+        - not: << pipeline.parameters.validation-flag >>
+
+    jobs:
+      - toolkit/choose_pipeline:
+          name: choose pipeline based on committer
+          context: bot-check
+
   validation:
     when:
-      not:
-        equal: [scheduled_pipeline, << pipeline.trigger_source >>]
+      and:
+        - not:
+            equal: [scheduled_pipeline, << pipeline.trigger_source >>]
+        - not: << pipeline.parameters.success-flag >>
+        - << pipeline.parameters.validation-flag >>
     jobs:
-      - required-builds
-      - docs
-      - optional-builds
+      - toolkit/required_builds
+      - toolkit/test_doc_build
+      - toolkit/optional_builds
       - toolkit/common_tests:
           min_rust_version: << pipeline.parameters.min-rust-version >>
       - toolkit/idiomatic_rust:
           min_rust_version: << pipeline.parameters.min-rust-version >>
       - toolkit/update_changelog:
           requires:
-            - required-builds
+            - toolkit/required_builds
             - toolkit/common_tests
             - toolkit/idiomatic_rust
           context:
@@ -85,11 +63,24 @@ workflows:
           ssh_fingerprint: << pipeline.parameters.fingerprint >>
           min_rust_version: << pipeline.parameters.min-rust-version >>
 
+  on_success:
+    when:
+      and:
+        - not:
+            equal: [scheduled_pipeline, << pipeline.trigger_source >>]
+        - << pipeline.parameters.success-flag >>
+        - not: << pipeline.parameters.validation-flag >>
+
+    jobs:
+      - toolkit/end_success
+
   release:
     when:
       and:
         - equal: [scheduled_pipeline, << pipeline.trigger_source >>]
         - equal: ["release check", << pipeline.schedule.name >>]
+        - not: << pipeline.parameters.success-flag >>
+        - not: << pipeline.parameters.validation-flag >>
     jobs:
       - toolkit/make_release:
           context:
