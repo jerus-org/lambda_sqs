@@ -3,6 +3,12 @@
   "dependencyDashboard": true,
   "packageRules": [
     {
+      "matchPackagePatterns": [
+        "jerus-org/circleci-toolkit"
+      ],
+      "enabled": false
+    },
+    {
       "packagePatterns": [
         "^futures[-_]?"
       ],
