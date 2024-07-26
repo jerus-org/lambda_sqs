@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- ci-update jerus-org/circleci-toolkit orb version from 0.22.0 to 0.24.1(pr [#45])
+
 ### Security
 
 - Dependencies: update rust crate lambda_runtime to 0.13.0(pr [#44])
@@ -69,6 +73,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#42]: https://github.com/jerus-org/lambda_sqs/pull/42
 [#43]: https://github.com/jerus-org/lambda_sqs/pull/43
 [#44]: https://github.com/jerus-org/lambda_sqs/pull/44
+[#45]: https://github.com/jerus-org/lambda_sqs/pull/45
 [Unreleased]: https://github.com/jerus-org/lambda_sqs/compare/0.2.5...HEAD
 [0.2.5]: https://github.com/jerus-org/lambda_sqs/compare/0.2.4...0.2.5
 [0.2.4]: https://github.com/jerus-org/lambda_sqs/compare/0.2.3...0.2.4
