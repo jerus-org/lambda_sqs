@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - chore-update CircleCI config and renovate settings(pr [#47])
 
+### Security
+
+- Dependencies: update serde packages(pr [#48])
+
 ## [0.2.7] - 2024-08-03
 
 ### Changed
@@ -88,6 +92,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#45]: https://github.com/jerus-org/lambda_sqs/pull/45
 [#46]: https://github.com/jerus-org/lambda_sqs/pull/46
 [#47]: https://github.com/jerus-org/lambda_sqs/pull/47
+[#48]: https://github.com/jerus-org/lambda_sqs/pull/48
 [Unreleased]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.7...HEAD
 [0.2.7]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.6...v0.2.7
 [0.2.6]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.5...v0.2.6
