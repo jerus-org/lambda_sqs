@@ -30,7 +30,7 @@ serde_json = "1.0.128"
 lambda_runtime = "0.13.0"
 
 [dev-dependencies]
-tokio = "1.37.0"
+tokio = "1.40.0"
 
 [package.metadata.docs.rs]
 all-features = true
