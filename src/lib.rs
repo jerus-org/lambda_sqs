@@ -21,7 +21,7 @@
 //!
 //! ```toml
 //! [dependencies]
-//! lambda_sqs = " {0.2.7"
+//! lambda_sqs = " {0.2.8"
 //! ```
 //!
 //! ```no_run
