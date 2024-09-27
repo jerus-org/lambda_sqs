@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Fixed
+
+- update renovate config to enable jerus-org/circleci-toolkit and add sourceUrl(pr [#50])
+
 ## [0.2.8] - 2024-09-14
 
 ### Changed
@@ -95,6 +101,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#47]: https://github.com/jerus-org/lambda_sqs/pull/47
 [#48]: https://github.com/jerus-org/lambda_sqs/pull/48
 [#49]: https://github.com/jerus-org/lambda_sqs/pull/49
+[#50]: https://github.com/jerus-org/lambda_sqs/pull/50
+[Unreleased]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.8...HEAD
 [0.2.8]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.7...v0.2.8
 [0.2.7]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.6...v0.2.7
 [0.2.6]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.5...v0.2.6
