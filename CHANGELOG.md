@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 
 - Dependencies: update dependency toolkit to v1.16.1(pr [#60])
+- Dependencies: update dependency toolkit to v1.18.0(pr [#62])
 
 ## [0.2.12] - 2024-11-02
 
@@ -142,6 +143,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#58]: https://github.com/jerus-org/lambda_sqs/pull/58
 [#59]: https://github.com/jerus-org/lambda_sqs/pull/59
 [#60]: https://github.com/jerus-org/lambda_sqs/pull/60
+[#62]: https://github.com/jerus-org/lambda_sqs/pull/62
 [Unreleased]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.12...HEAD
 [0.2.12]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.11...v0.2.12
 [0.2.11]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.10...v0.2.11
