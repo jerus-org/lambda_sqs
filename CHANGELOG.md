@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- ci(circleci)-update toolkit orb and add code coverage step to pipeline(pr [#63])
+
 ### Security
 
 - Dependencies: update dependency toolkit to v1.16.1(pr [#60])
@@ -144,6 +148,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#59]: https://github.com/jerus-org/lambda_sqs/pull/59
 [#60]: https://github.com/jerus-org/lambda_sqs/pull/60
 [#62]: https://github.com/jerus-org/lambda_sqs/pull/62
+[#63]: https://github.com/jerus-org/lambda_sqs/pull/63
 [Unreleased]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.12...HEAD
 [0.2.12]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.11...v0.2.12
 [0.2.11]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.10...v0.2.11
