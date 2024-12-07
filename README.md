@@ -25,7 +25,7 @@ To use the crate add the dependency in Cargo.toml.
 
 ```toml
 [dependencies]
-lambda_sqs = " 0.2.15"
+lambda_sqs = " 0.2.16"
 ```
 
 ## Example
