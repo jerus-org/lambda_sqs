@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - ci(circleci)-update configuration with new parameter(pr [#75])
 - chore(config)-migrate renovate config(pr [#78])
+- 👷 ci(circleci): update CI workflow with version management(pr [#79])
 
 ### Security
 
@@ -224,6 +225,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#76]: https://github.com/jerus-org/lambda_sqs/pull/76
 [#77]: https://github.com/jerus-org/lambda_sqs/pull/77
 [#78]: https://github.com/jerus-org/lambda_sqs/pull/78
+[#79]: https://github.com/jerus-org/lambda_sqs/pull/79
 [Unreleased]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.20...HEAD
 [0.2.20]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.19...v0.2.20
 [0.2.19]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.18...v0.2.19
