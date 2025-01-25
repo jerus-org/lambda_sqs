@@ -96,10 +96,31 @@ workflows:
         - not: << pipeline.parameters.success-flag >>
         - not: << pipeline.parameters.validation-flag >>
     jobs:
+      - toolkit/save_next_version:
+          min_rust_version: << pipeline.parameters.min-rust-version >>
+
       - toolkit/make_release:
           context:
             - release
             - bot-check
+          requires:
+            - toolkit/save_next_version
+          pre-steps:
+            - attach_workspace:
+                at: /tmp/workspace
+            - run:
+                name: Set SEMVER based on next-version file
+                command: |
+                  set +ex
+                  export SEMVER=$(cat /tmp/workspace/next-version)
+                  echo $SEMVER
+                  echo "export SEMVER=$SEMVER" >> "$BASH_ENV"
           ssh_fingerprint: << pipeline.parameters.fingerprint >>
           min_rust_version: << pipeline.parameters.min-rust-version >>
           when_use_workspace: false
+
+      - toolkit/no_release:
+          min_rust_version: << pipeline.parameters.min-rust-version >>
+          requires:
+            - toolkit/save_next_version
+              - failed
