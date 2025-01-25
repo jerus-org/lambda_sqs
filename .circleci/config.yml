@@ -122,5 +122,5 @@ workflows:
       - toolkit/no_release:
           min_rust_version: << pipeline.parameters.min-rust-version >>
           requires:
-            - toolkit/save_next_version
-              - failed
+            - toolkit/save_next_version:
+                - failed
