@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 
 - Dependencies: update rust crate serde_json to 1.0.140(pr [#84])
+- Dependencies: update dependency toolkit to v2.1.0(pr [#85])
 
 ## [0.2.24] - 2025-03-01
 
@@ -256,6 +257,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#82]: https://github.com/jerus-org/lambda_sqs/pull/82
 [#83]: https://github.com/jerus-org/lambda_sqs/pull/83
 [#84]: https://github.com/jerus-org/lambda_sqs/pull/84
+[#85]: https://github.com/jerus-org/lambda_sqs/pull/85
 [Unreleased]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.24...HEAD
 [0.2.24]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.23...v0.2.24
 [0.2.23]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.22...v0.2.23
