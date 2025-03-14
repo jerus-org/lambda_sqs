@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Security
+
+- Dependencies: update rust crate serde to 1.0.219(pr [#86])
+
 ## [0.2.25] - 2025-03-08
 
 ### Security
@@ -258,6 +264,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#83]: https://github.com/jerus-org/lambda_sqs/pull/83
 [#84]: https://github.com/jerus-org/lambda_sqs/pull/84
 [#85]: https://github.com/jerus-org/lambda_sqs/pull/85
+[#86]: https://github.com/jerus-org/lambda_sqs/pull/86
+[Unreleased]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.25...HEAD
 [0.2.25]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.24...v0.2.25
 [0.2.24]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.23...v0.2.24
 [0.2.23]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.22...v0.2.23
