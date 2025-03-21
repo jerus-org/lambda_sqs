@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Security
+
+- Dependencies: update dependency toolkit to v2.5.1(pr [#88])
+
 ## [0.2.26] - 2025-03-15
 
 ### Security
@@ -267,6 +273,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#85]: https://github.com/jerus-org/lambda_sqs/pull/85
 [#86]: https://github.com/jerus-org/lambda_sqs/pull/86
 [#87]: https://github.com/jerus-org/lambda_sqs/pull/87
+[#88]: https://github.com/jerus-org/lambda_sqs/pull/88
+[Unreleased]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.26...HEAD
 [0.2.26]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.25...v0.2.26
 [0.2.25]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.24...v0.2.25
 [0.2.24]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.23...v0.2.24
