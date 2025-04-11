@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 
 - Dependencies: update rust crate tokio to v1.44.2 [security](pr [#89])
+- Dependencies: update rust crate tokio to 1.44.2(pr [#91])
 
 ## [0.2.27] - 2025-03-22
 
@@ -281,6 +282,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#87]: https://github.com/jerus-org/lambda_sqs/pull/87
 [#88]: https://github.com/jerus-org/lambda_sqs/pull/88
 [#89]: https://github.com/jerus-org/lambda_sqs/pull/89
+[#91]: https://github.com/jerus-org/lambda_sqs/pull/91
 [Unreleased]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.27...HEAD
 [0.2.27]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.26...v0.2.27
 [0.2.26]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.25...v0.2.26
