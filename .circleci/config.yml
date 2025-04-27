@@ -15,6 +15,10 @@ parameters:
     type: boolean
     default: false
     description: "If true, the success pipeline will be executed."
+  release-flag:
+    type: boolean
+    default: false
+    description: "If true, the success pipeline will be executed."
 
 orbs:
   toolkit: jerus-org/circleci-toolkit@2.9.1
@@ -32,6 +36,7 @@ workflows:
             equal: [scheduled_pipeline, << pipeline.trigger_source >>]
         - not: << pipeline.parameters.success-flag >>
         - not: << pipeline.parameters.validation-flag >>
+        - not: << pipeline.parameters.release-flag >>
 
     jobs:
       - toolkit/choose_pipeline:
@@ -45,6 +50,7 @@ workflows:
             equal: [scheduled_pipeline, << pipeline.trigger_source >>]
         - not: << pipeline.parameters.success-flag >>
         - << pipeline.parameters.validation-flag >>
+        - not: << pipeline.parameters.release-flag >>
     jobs:
       - toolkit/label:
           min_rust_version: << pipeline.parameters.min-rust-version >>
@@ -84,17 +90,21 @@ workflows:
             equal: [scheduled_pipeline, << pipeline.trigger_source >>]
         - << pipeline.parameters.success-flag >>
         - not: << pipeline.parameters.validation-flag >>
+        - not: << pipeline.parameters.release-flag >>
 
     jobs:
       - toolkit/end_success
 
   release:
     when:
-      and:
-        - equal: [scheduled_pipeline, << pipeline.trigger_source >>]
-        - equal: ["release check", << pipeline.schedule.name >>]
-        - not: << pipeline.parameters.success-flag >>
-        - not: << pipeline.parameters.validation-flag >>
+      or:
+        - and:
+            - equal: [scheduled_pipeline, << pipeline.trigger_source >>]
+            - equal: ["release check", << pipeline.schedule.name >>]
+        - and:
+            - not: << pipeline.parameters.success-flag >>
+            - not: << pipeline.parameters.validation-flag >>
+            - << pipeline.parameters.release-flag >>
     jobs:
       - toolkit/save_next_version:
           min_rust_version: << pipeline.parameters.min-rust-version >>

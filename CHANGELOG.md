@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - 👷 ci(circleci)-update toolkit orb version(pr [#93])
+- 👷 ci(config)-add release-flag parameter to CircleCI config(pr [#94])
 
 ### Security
 
@@ -295,6 +296,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#91]: https://github.com/jerus-org/lambda_sqs/pull/91
 [#92]: https://github.com/jerus-org/lambda_sqs/pull/92
 [#93]: https://github.com/jerus-org/lambda_sqs/pull/93
+[#94]: https://github.com/jerus-org/lambda_sqs/pull/94
 [Unreleased]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.28...HEAD
 [0.2.28]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.27...v0.2.28
 [0.2.27]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.26...v0.2.27
