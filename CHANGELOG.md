@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 
 - Dependencies: update rust crate tokio to 1.45.1(pr [#98])
+- Dependencies: update rust crate lambda_runtime to 0.14.2(pr [#99])
 
 ## [0.2.31] - 2025-05-28
 
@@ -323,6 +324,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#96]: https://github.com/jerus-org/lambda_sqs/pull/96
 [#97]: https://github.com/jerus-org/lambda_sqs/pull/97
 [#98]: https://github.com/jerus-org/lambda_sqs/pull/98
+[#99]: https://github.com/jerus-org/lambda_sqs/pull/99
 [Unreleased]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.31...HEAD
 [0.2.31]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.30...v0.2.31
 [0.2.30]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.29...v0.2.30
