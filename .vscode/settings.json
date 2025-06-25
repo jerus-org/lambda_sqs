@@ -6,5 +6,9 @@
     ],
     "conventionalCommits.scopes": [
         "Release Management"
-    ]
+    ],
+    "sonarlint.connectedMode.project": {
+        "connectionId": "jerus-org",
+        "projectKey": "jerus-org_lambda_sqs"
+    }
 }
