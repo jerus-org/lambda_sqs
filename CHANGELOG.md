@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Security
+
+- Dependencies: update rust crate tokio to 1.45.1(pr [#98])
+
 ## [0.2.31] - 2025-05-28
 
 ### Changed
@@ -316,6 +322,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#95]: https://github.com/jerus-org/lambda_sqs/pull/95
 [#96]: https://github.com/jerus-org/lambda_sqs/pull/96
 [#97]: https://github.com/jerus-org/lambda_sqs/pull/97
+[#98]: https://github.com/jerus-org/lambda_sqs/pull/98
+[Unreleased]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.31...HEAD
 [0.2.31]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.30...v0.2.31
 [0.2.30]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.29...v0.2.30
 [0.2.29]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.28...v0.2.29
