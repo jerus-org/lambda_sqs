@@ -63,7 +63,7 @@ impl fmt::Display for SqsEvent {
         self.records
             .clone()
             .into_iter()
-            .try_for_each(|item| writeln!(f, "{}", item))?;
+            .try_for_each(|item| writeln!(f, "{item}"))?;
         writeln!(f, "]")
     }
 }
