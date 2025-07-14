@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - 💄 style(domain)-enhance readability with format string(pr [#100])
+- 🔧 chore(config)-streamline renovate configuration(pr [#101])
 
 ## [0.2.32] - 2025-06-28
 
@@ -332,6 +333,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#98]: https://github.com/jerus-org/lambda_sqs/pull/98
 [#99]: https://github.com/jerus-org/lambda_sqs/pull/99
 [#100]: https://github.com/jerus-org/lambda_sqs/pull/100
+[#101]: https://github.com/jerus-org/lambda_sqs/pull/101
 [Unreleased]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.32...HEAD
 [0.2.32]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.31...v0.2.32
 [0.2.31]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.30...v0.2.31
