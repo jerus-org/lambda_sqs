@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Security
+
+- Dependencies: bump tracing-subscriber from 0.3.19 to 0.3.20 in the cargo group across 1 directory(pr [#109])
+
 ## [0.2.34] - 2025-08-28
 
 ### Fixed
@@ -356,6 +362,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#106]: https://github.com/jerus-org/lambda_sqs/pull/106
 [#107]: https://github.com/jerus-org/lambda_sqs/pull/107
 [#108]: https://github.com/jerus-org/lambda_sqs/pull/108
+[#109]: https://github.com/jerus-org/lambda_sqs/pull/109
+[Unreleased]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.34...HEAD
 [0.2.34]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.33...v0.2.34
 [0.2.33]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.32...v0.2.33
 [0.2.32]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.31...v0.2.32
