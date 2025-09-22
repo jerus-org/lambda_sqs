@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- chore-rename CHANGELOG.md to PRLOG.md(pr [#110])
+
 ### Security
 
 - Dependencies: bump tracing-subscriber from 0.3.19 to 0.3.20 in the cargo group across 1 directory(pr [#109])
@@ -363,6 +367,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#107]: https://github.com/jerus-org/lambda_sqs/pull/107
 [#108]: https://github.com/jerus-org/lambda_sqs/pull/108
 [#109]: https://github.com/jerus-org/lambda_sqs/pull/109
+[#110]: https://github.com/jerus-org/lambda_sqs/pull/110
 [Unreleased]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.34...HEAD
 [0.2.34]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.33...v0.2.34
 [0.2.33]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.32...v0.2.33
