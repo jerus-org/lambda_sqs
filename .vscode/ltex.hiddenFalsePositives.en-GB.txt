@@ -1,0 +1,1 @@
+{"rule":"SPACE_BEFORE_PARENTHESIS","sentence":"^\\Q💄 style(domain)-enhance readability with format string(pr #100)\n🔧 chore(config)-streamline renovate configuration(pr #101)\\E$"}
