@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - chore-rename CHANGELOG.md to PRLOG.md(pr [#110])
+- chore-update release.toml to reference PRLOG.md instead of CHANGELOG.md(pr [#111])
 
 ### Security
 
@@ -368,6 +369,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#108]: https://github.com/jerus-org/lambda_sqs/pull/108
 [#109]: https://github.com/jerus-org/lambda_sqs/pull/109
 [#110]: https://github.com/jerus-org/lambda_sqs/pull/110
+[#111]: https://github.com/jerus-org/lambda_sqs/pull/111
 [Unreleased]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.34...HEAD
 [0.2.34]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.33...v0.2.34
 [0.2.33]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.32...v0.2.33
