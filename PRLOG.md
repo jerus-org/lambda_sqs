@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- add release-hook.sh script for automated changelog generation(pr [#112])
+
 ### Changed
 
 - chore-rename CHANGELOG.md to PRLOG.md(pr [#110])
@@ -370,6 +374,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#109]: https://github.com/jerus-org/lambda_sqs/pull/109
 [#110]: https://github.com/jerus-org/lambda_sqs/pull/110
 [#111]: https://github.com/jerus-org/lambda_sqs/pull/111
+[#112]: https://github.com/jerus-org/lambda_sqs/pull/112
 [Unreleased]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.34...HEAD
 [0.2.34]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.33...v0.2.34
 [0.2.33]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.32...v0.2.33
