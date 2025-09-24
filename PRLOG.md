@@ -16,6 +16,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - chore-rename CHANGELOG.md to PRLOG.md(pr [#110])
 - chore-update release.toml to reference PRLOG.md instead of CHANGELOG.md(pr [#111])
 
+### Fixed
+
+- deps: update rust crate lambda_runtime to 0.14.4(pr [#113])
+
 ### Security
 
 - Dependencies: bump tracing-subscriber from 0.3.19 to 0.3.20 in the cargo group across 1 directory(pr [#109])
@@ -375,6 +379,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#110]: https://github.com/jerus-org/lambda_sqs/pull/110
 [#111]: https://github.com/jerus-org/lambda_sqs/pull/111
 [#112]: https://github.com/jerus-org/lambda_sqs/pull/112
+[#113]: https://github.com/jerus-org/lambda_sqs/pull/113
 [Unreleased]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.34...HEAD
 [0.2.34]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.33...v0.2.34
 [0.2.33]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.32...v0.2.33
