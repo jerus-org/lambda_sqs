@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [0.2.35] - 2025-09-28
 
 ### Added
 
@@ -382,7 +382,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#112]: https://github.com/jerus-org/lambda_sqs/pull/112
 [#113]: https://github.com/jerus-org/lambda_sqs/pull/113
 [#114]: https://github.com/jerus-org/lambda_sqs/pull/114
-[Unreleased]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.34...HEAD
+[0.2.35]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.34...v0.2.35
 [0.2.34]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.33...v0.2.34
 [0.2.33]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.32...v0.2.33
 [0.2.32]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.31...v0.2.32
