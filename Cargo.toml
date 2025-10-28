@@ -1,6 +1,6 @@
 [package]
 name = "lambda_sqs"
-version = "0.2.35"
+version = "0.2.36"
 description = """
 Handles an SQS event and provides a vec of your type for processing. 
 """
