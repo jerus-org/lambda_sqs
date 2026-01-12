@@ -1,32 +1,29 @@
 version: 2.1
 
 parameters:
-  min-rust-version:
+  min_rust_version:
     type: string
     default: "1.82"
   fingerprint:
     type: string
     default: SHA256:OkxsH8Z6Iim6WDJBaII9eTT9aaO1f3eDc6IpsgYYPVg
-  validation-flag:
+  validation_flag:
     type: boolean
     default: false
     description: "If true, the validation pipeline will be executed."
-  success-flag:
+  success_flag:
     type: boolean
     default: false
     description: "If true, the success pipeline will be executed."
-  release-flag:
+  release_flag:
     type: boolean
     default: false
     description: "If true, the success pipeline will be executed."
 
 orbs:
-  toolkit: jerus-org/circleci-toolkit@3.2.0
+  toolkit: jerus-org/circleci-toolkit@4.2.1
 
-executors:
-  rust-env:
-    docker:
-      - image: jerusdp/ci-rust:<<pipeline.parameters.min-rust-version>>
+# Custom executors removed - using toolkit rolling executors instead
 
 workflows:
   check_last_commit:
@@ -34,9 +31,9 @@ workflows:
       and:
         - not:
             equal: [scheduled_pipeline, << pipeline.trigger_source >>]
-        - not: << pipeline.parameters.success-flag >>
-        - not: << pipeline.parameters.validation-flag >>
-        - not: << pipeline.parameters.release-flag >>
+        - not: << pipeline.parameters.success_flag >>
+        - not: << pipeline.parameters.validation_flag >>
+        - not: << pipeline.parameters.release_flag >>
 
     jobs:
       - toolkit/choose_pipeline:
@@ -48,29 +45,29 @@ workflows:
       and:
         - not:
             equal: [scheduled_pipeline, << pipeline.trigger_source >>]
-        - not: << pipeline.parameters.success-flag >>
-        - << pipeline.parameters.validation-flag >>
-        - not: << pipeline.parameters.release-flag >>
+        - not: << pipeline.parameters.success_flag >>
+        - << pipeline.parameters.validation_flag >>
+        - not: << pipeline.parameters.release_flag >>
     jobs:
       - toolkit/label:
-          min_rust_version: << pipeline.parameters.min-rust-version >>
+          min_rust_version: << pipeline.parameters.min_rust_version >>
           context: pcu-app
           filters:
             branches:
               only:
                 - main
       - toolkit/code_coverage:
-          min_rust_version: << pipeline.parameters.min-rust-version >>
+          min_rust_version: << pipeline.parameters.min_rust_version >>
       - toolkit/required_builds:
-          min_rust_version: << pipeline.parameters.min-rust-version >>
+          min_rust_version: << pipeline.parameters.min_rust_version >>
       - toolkit/test_doc_build:
-          min_rust_version: << pipeline.parameters.min-rust-version >>
+          min_rust_version: << pipeline.parameters.min_rust_version >>
       - toolkit/optional_builds:
-          min_rust_version: << pipeline.parameters.min-rust-version >>
+          min_rust_version: << pipeline.parameters.min_rust_version >>
       - toolkit/common_tests:
-          min_rust_version: << pipeline.parameters.min-rust-version >>
+          min_rust_version: << pipeline.parameters.min_rust_version >>
       - toolkit/idiomatic_rust:
-          min_rust_version: << pipeline.parameters.min-rust-version >>
+          min_rust_version: << pipeline.parameters.min_rust_version >>
       - toolkit/update_prlog:
           requires:
             - toolkit/required_builds
@@ -81,16 +78,16 @@ workflows:
             - release
             - bot-check
           ssh_fingerprint: << pipeline.parameters.fingerprint >>
-          min_rust_version: << pipeline.parameters.min-rust-version >>
+          min_rust_version: << pipeline.parameters.min_rust_version >>
 
   on_success:
     when:
       and:
         - not:
             equal: [scheduled_pipeline, << pipeline.trigger_source >>]
-        - << pipeline.parameters.success-flag >>
-        - not: << pipeline.parameters.validation-flag >>
-        - not: << pipeline.parameters.release-flag >>
+        - << pipeline.parameters.success_flag >>
+        - not: << pipeline.parameters.validation_flag >>
+        - not: << pipeline.parameters.release_flag >>
 
     jobs:
       - toolkit/end_success
@@ -102,12 +99,12 @@ workflows:
             - equal: [scheduled_pipeline, << pipeline.trigger_source >>]
             - equal: ["release check", << pipeline.schedule.name >>]
         - and:
-            - not: << pipeline.parameters.success-flag >>
-            - not: << pipeline.parameters.validation-flag >>
-            - << pipeline.parameters.release-flag >>
+            - not: << pipeline.parameters.success_flag >>
+            - not: << pipeline.parameters.validation_flag >>
+            - << pipeline.parameters.release_flag >>
     jobs:
       - toolkit/save_next_version:
-          min_rust_version: << pipeline.parameters.min-rust-version >>
+          min_rust_version: << pipeline.parameters.min_rust_version >>
 
       - toolkit/make_release:
           context:
@@ -126,11 +123,11 @@ workflows:
                   echo $SEMVER
                   echo "export SEMVER=$SEMVER" >> "$BASH_ENV"
           ssh_fingerprint: << pipeline.parameters.fingerprint >>
-          min_rust_version: << pipeline.parameters.min-rust-version >>
+          min_rust_version: << pipeline.parameters.min_rust_version >>
           when_use_workspace: false
 
       - toolkit/no_release:
-          min_rust_version: << pipeline.parameters.min-rust-version >>
+          min_rust_version: << pipeline.parameters.min_rust_version >>
           requires:
             - toolkit/save_next_version:
                 - failed
