@@ -292,7 +292,7 @@ dependencies = [
 
 [[package]]
 name = "lambda_sqs"
-version = "0.2.37"
+version = "0.3.0"
 dependencies = [
  "lambda_runtime",
  "serde",
