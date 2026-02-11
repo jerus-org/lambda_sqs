@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- add security improvements to CI(pr [#129])
+
 ### Security
 
 - Dependencies: bump bytes from 1.9.0 to 1.11.1 in the cargo group across 1 directory(pr [#128])
@@ -431,6 +435,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#126]: https://github.com/jerus-org/lambda_sqs/pull/126
 [#127]: https://github.com/jerus-org/lambda_sqs/pull/127
 [#128]: https://github.com/jerus-org/lambda_sqs/pull/128
+[#129]: https://github.com/jerus-org/lambda_sqs/pull/129
 [Unreleased]: https://github.com/jerus-org/lambda_sqs/compare/v0.3.0...HEAD
 [0.3.0]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.37...v0.3.0
 [0.2.37]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.36...v0.2.37
