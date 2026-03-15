@@ -13,16 +13,13 @@ readme = "README.md"
 documentation = "https://docs.rs/lambda-sqs"
 categories = ["web-programming"]
 keywords = ["aws", "sqs", "lambda"]
-exclude = [
-    ".circleci/config.yml",
-    ".fossa.yml",
-    ".github/workflows/fossa.yml",
-    ".github/workflows/rust_security_audit.yml",
-    ".gitignore",
-    ".vscode/settings.json",
-    ".whitesource",
-    "markdownlint.jsonc",
-    "renovate.json",
+include = [
+    "**/*.rs",
+    "Cargo.toml",
+    "README.md",
+    "LICENSE-MIT",
+    "LICENSE-APACHE",
+    "CHANGELOG.md",
 ]
 
 [dependencies]
