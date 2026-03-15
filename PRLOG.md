@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - chore-pre-migration fixes(pr [#133])
 - chore-workspace restructure and 3-file CI migration(pr [#134])
 
+### Fixed
+
+- deps: update rust crate lambda_runtime to 1.1.1(pr [#131])
+
 ## [0.3.1] - 2026-02-28
 
 ### Added
@@ -450,6 +454,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#130]: https://github.com/jerus-org/lambda_sqs/pull/130
 [#133]: https://github.com/jerus-org/lambda_sqs/pull/133
 [#134]: https://github.com/jerus-org/lambda_sqs/pull/134
+[#131]: https://github.com/jerus-org/lambda_sqs/pull/131
 [Unreleased]: https://github.com/jerus-org/lambda_sqs/compare/v0.3.1...HEAD
 [0.3.1]: https://github.com/jerus-org/lambda_sqs/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/jerus-org/lambda_sqs/compare/v0.2.37...v0.3.0
