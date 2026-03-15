@@ -1,38 +1,17 @@
-[package]
-name = "lambda_sqs"
+[workspace]
+members = ["crates/lambda_sqs"]
+resolver = "2"
+
+[workspace.package]
 version = "0.3.1"
-description = """
-Handles an SQS event and provides a vec of your type for processing. 
-"""
-edition = "2021"
 authors = ["Jeremiah Russell <jrussell@jerus.ie>"]
 license = "MIT OR Apache-2.0"
-rust-version = "1.81"
 repository = "https://github.com/jerus-org/lambda_sqs"
-readme = "README.md"
-documentation = "https://docs.rs/lambda-sqs"
-categories = ["web-programming"]
-keywords = ["aws", "sqs", "lambda"]
-exclude = [
-    ".circleci/config.yml",
-    ".fossa.yml",
-    ".github/workflows/fossa.yml",
-    ".github/workflows/rust_security_audit.yml",
-    ".gitignore",
-    ".vscode/settings.json",
-    ".whitesource",
-    "markdownlint.jsonc",
-    "renovate.json",
-]
+edition = "2021"
+rust-version = "1.82"
 
-[dependencies]
+[workspace.dependencies]
 serde = { version = "1.0.228", features = ["derive"] }
 serde_json = "1.0.149"
 lambda_runtime = "1.0.2"
-
-[dev-dependencies]
 tokio = "1.49.0"
-
-[package.metadata.docs.rs]
-all-features = true
-rustdoc-args = ["--cfg", "docsrs"]
