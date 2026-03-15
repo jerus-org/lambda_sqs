@@ -4,52 +4,13 @@ parameters:
   min_rust_version:
     type: string
     default: "1.82"
-  fingerprint:
-    type: string
-    default: SHA256:OkxsH8Z6Iim6WDJBaII9eTT9aaO1f3eDc6IpsgYYPVg
-  validation_flag:
-    type: boolean
-    default: false
-    description: "If true, the validation pipeline will be executed."
-  success_flag:
-    type: boolean
-    default: false
-    description: "If true, the success pipeline will be executed."
-  release_flag:
-    type: boolean
-    default: false
-    description: "If true, the success pipeline will be executed."
 
 orbs:
-  toolkit: jerus-org/circleci-toolkit@4.4.3
-
-# Custom executors removed - using toolkit rolling executors instead
+  toolkit: jerus-org/circleci-toolkit@4.11.0
 
 workflows:
-  check_last_commit:
-    when:
-      and:
-        - not:
-            equal: [scheduled_pipeline, << pipeline.trigger_source >>]
-        - not: << pipeline.parameters.success_flag >>
-        - not: << pipeline.parameters.validation_flag >>
-        - not: << pipeline.parameters.release_flag >>
-
-    jobs:
-      - toolkit/choose_pipeline:
-          name: choose pipeline based on committer
-          context: bot-check
-
   validation:
-    when:
-      and:
-        - not:
-            equal: [scheduled_pipeline, << pipeline.trigger_source >>]
-        - not: << pipeline.parameters.success_flag >>
-        - << pipeline.parameters.validation_flag >>
-        - not: << pipeline.parameters.release_flag >>
     jobs:
-      # Signature verification for trusted PRs (with write access for comments)
       - toolkit/verify_commit_signatures:
           name: verify_commit_signatures_trusted
           context: bot-check
@@ -60,99 +21,56 @@ workflows:
               ignore:
                 - main
                 - /pull\/[0-9]+/
-      # Signature verification for forked PRs (read-only, no comments)
       - toolkit/verify_commit_signatures:
           name: verify_commit_signatures_forked
           post_comment: false
           update_pcu: false
           filters:
             branches:
-              only: /pull\/[0-9]+/
-      - toolkit/label:
+              only:
+                - /pull\/[0-9]+/
+      - toolkit/required_builds_rolling:
           min_rust_version: << pipeline.parameters.min_rust_version >>
-          context: pcu-app
+      - toolkit/optional_builds:
+          min_rust_version: << pipeline.parameters.min_rust_version >>
+          filters:
+            branches:
+              ignore: main
+      - toolkit/test_doc_build:
+          min_rust_version: << pipeline.parameters.min_rust_version >>
+          filters:
+            branches:
+              ignore: main
+      - toolkit/idiomatic_rust:
+          min_rust_version: << pipeline.parameters.min_rust_version >>
+          filters:
+            branches:
+              ignore: main
+      - toolkit/common_tests_rolling:
+          min_rust_version: << pipeline.parameters.min_rust_version >>
+      - toolkit/security:
+          name: security audit only
+          sonarcloud: false
           filters:
             branches:
               only:
                 - main
+                - /pull\/[0-9]+/
+      - toolkit/security:
+          name: security with sonarcloud
+          context: SonarCloud
+          filters:
+            branches:
+              ignore:
+                - /pull\/[0-9]+/
+                - main
       - toolkit/code_coverage:
           min_rust_version: << pipeline.parameters.min_rust_version >>
-      - toolkit/required_builds:
-          min_rust_version: << pipeline.parameters.min_rust_version >>
-      - toolkit/test_doc_build:
-          min_rust_version: << pipeline.parameters.min_rust_version >>
-      - toolkit/optional_builds:
-          min_rust_version: << pipeline.parameters.min_rust_version >>
-      - toolkit/common_tests:
-          min_rust_version: << pipeline.parameters.min_rust_version >>
-      - toolkit/idiomatic_rust:
-          min_rust_version: << pipeline.parameters.min_rust_version >>
-      - toolkit/update_prlog:
+          package: lambda_sqs
           filters:
             branches:
               ignore:
                 - /pull\/[0-9]+/
                 - main
           requires:
-            - verify_commit_signatures_trusted
-            - toolkit/required_builds
-            - toolkit/common_tests
-            - toolkit/idiomatic_rust
-            - toolkit/code_coverage
-          context:
-            - release
-            - bot-check
-          ssh_fingerprint: << pipeline.parameters.fingerprint >>
-          min_rust_version: << pipeline.parameters.min_rust_version >>
-
-  on_success:
-    when:
-      and:
-        - not:
-            equal: [scheduled_pipeline, << pipeline.trigger_source >>]
-        - << pipeline.parameters.success_flag >>
-        - not: << pipeline.parameters.validation_flag >>
-        - not: << pipeline.parameters.release_flag >>
-
-    jobs:
-      - toolkit/end_success
-
-  release:
-    when:
-      or:
-        - and:
-            - equal: [scheduled_pipeline, << pipeline.trigger_source >>]
-            - equal: ["release check", << pipeline.schedule.name >>]
-        - and:
-            - not: << pipeline.parameters.success_flag >>
-            - not: << pipeline.parameters.validation_flag >>
-            - << pipeline.parameters.release_flag >>
-    jobs:
-      - toolkit/save_next_version:
-          min_rust_version: << pipeline.parameters.min_rust_version >>
-
-      - toolkit/make_release:
-          context:
-            - release
-            - bot-check
-          requires:
-            - toolkit/save_next_version
-          pre-steps:
-            - attach_workspace:
-                at: /tmp/workspace
-            - run:
-                name: Set SEMVER based on next-version file
-                command: |
-                  set +ex
-                  export SEMVER=$(cat /tmp/workspace/next-version)
-                  echo $SEMVER
-                  echo "export SEMVER=$SEMVER" >> "$BASH_ENV"
-          ssh_fingerprint: << pipeline.parameters.fingerprint >>
-          min_rust_version: << pipeline.parameters.min_rust_version >>
-          when_use_workspace: false
-
-      - toolkit/no_release:
-          min_rust_version: << pipeline.parameters.min_rust_version >>
-          requires:
-            - toolkit/save_next_version:
-                - failed
+            - security with sonarcloud

@@ -1,0 +1,38 @@
+[package]
+name = "lambda_sqs"
+version.workspace = true
+description = """
+Handles an SQS event and provides a vec of your type for processing.
+"""
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/lambda-sqs"
+categories = ["web-programming"]
+keywords = ["aws", "sqs", "lambda"]
+exclude = [
+    ".circleci/config.yml",
+    ".fossa.yml",
+    ".github/workflows/fossa.yml",
+    ".github/workflows/rust_security_audit.yml",
+    ".gitignore",
+    ".vscode/settings.json",
+    ".whitesource",
+    "markdownlint.jsonc",
+    "renovate.json",
+]
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+lambda_runtime.workspace = true
+
+[dev-dependencies]
+tokio.workspace = true
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]

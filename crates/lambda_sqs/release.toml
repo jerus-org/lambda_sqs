@@ -1,0 +1,11 @@
+pre-release-commit-message = "chore: Release lambda_sqs v{{version}}"
+tag-message = "{{tag_name}}"
+tag-name = "lambda_sqs-v{{version}}"
+sign-tag = true
+sign-commit = true
+consolidate-commits = true
+allow-branch = ["main"]
+pre-release-hook = ["./release-hook.sh"]
+pre-release-replacements = [
+    { file = "README.md", search = "lambda_sqs = \"[0-9]+\\.[0-9]+\\.[0-9]+\"", replace = "lambda_sqs = \"{{version}}\"", exactly = 1 },
+]
