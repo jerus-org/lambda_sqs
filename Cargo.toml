@@ -3,7 +3,7 @@ members = ["crates/lambda_sqs"]
 resolver = "2"
 
 [workspace.package]
-version = "0.3.1"
+version = "0.3.2"
 authors = ["Jeremiah Russell <jrussell@jerus.ie>"]
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/jerus-org/lambda_sqs"
