@@ -248,9 +248,9 @@ checksum = "d75a2a4b1b190afb6f5425f10f6a8f959d2ea0b9c2b1d79553551850539e4674"
 
 [[package]]
 name = "lambda_runtime"
-version = "1.0.2"
+version = "1.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "dc0b4409eea054e4c06f0101fed547b2cf208e8eca9dc6d41dead4114577852b"
+checksum = "23583c918bee8de7bc005ba2ad8ebd84529894bfd9a863cf24226bb6c7787690"
 dependencies = [
  "async-stream",
  "base64",
@@ -273,9 +273,9 @@ dependencies = [
 
 [[package]]
 name = "lambda_runtime_api_client"
-version = "1.0.1"
+version = "1.0.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2c039f06329949692a81a993ede4cfaa6abab3ac8e72590cf7c5e6a64a9ec7b1"
+checksum = "7b4873061514cb57ffb6a599b77c46c65d6d783efe9bad8fd56b7cba7f0459ef"
 dependencies = [
  "bytes",
  "futures-channel",
@@ -292,7 +292,7 @@ dependencies = [
 
 [[package]]
 name = "lambda_sqs"
-version = "0.3.1"
+version = "0.3.2"
 dependencies = [
  "lambda_runtime",
  "serde",
@@ -543,9 +543,9 @@ dependencies = [
 
 [[package]]
 name = "tokio"
-version = "1.49.0"
+version = "1.50.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "72a2903cd7736441aac9df9d7688bd0ce48edccaadf181c3b90be801e81d3d86"
+checksum = "27ad5e34374e03cfffefc301becb44e9dc3c17584f414349ebe29ed26661822d"
 dependencies = [
  "bytes",
  "libc",
