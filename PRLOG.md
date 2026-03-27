@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - chore-migrate CI to circleci-toolkit 6.0.0(pr [#137])
 
+### Fixed
+
+- deps: update rust crate lambda_runtime to 1.1.2(pr [#135])
+
 ## [0.3.2] - 2026-03-15
 
 ### Changed
@@ -464,6 +468,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#131]: https://github.com/jerus-org/lambda_sqs/pull/131
 [#132]: https://github.com/jerus-org/lambda_sqs/pull/132
 [#137]: https://github.com/jerus-org/lambda_sqs/pull/137
+[#135]: https://github.com/jerus-org/lambda_sqs/pull/135
 [Unreleased]: https://github.com/jerus-org/lambda_sqs/compare/v0.3.2...HEAD
 [0.3.2]: https://github.com/jerus-org/lambda_sqs/compare/v0.3.1...v0.3.2
 [0.3.1]: https://github.com/jerus-org/lambda_sqs/compare/v0.3.0...v0.3.1
