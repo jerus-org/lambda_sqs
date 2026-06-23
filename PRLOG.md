@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- ci-run sonarcloud security on main(pr [#144])
+
 ### Fixed
 
 - deps: update dependency toolkit to v6.2.0(pr [#140])
@@ -486,6 +490,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#141]: https://github.com/jerus-org/lambda_sqs/pull/141
 [#143]: https://github.com/jerus-org/lambda_sqs/pull/143
 [#142]: https://github.com/jerus-org/lambda_sqs/pull/142
+[#144]: https://github.com/jerus-org/lambda_sqs/pull/144
 [Unreleased]: https://github.com/jerus-org/lambda_sqs/compare/v0.3.3...HEAD
 [0.3.3]: https://github.com/jerus-org/lambda_sqs/compare/v0.3.2...v0.3.3
 [0.3.2]: https://github.com/jerus-org/lambda_sqs/compare/v0.3.1...v0.3.2
