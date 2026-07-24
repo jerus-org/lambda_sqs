@@ -20,7 +20,7 @@ impl SqsMessage {
 impl fmt::Display for SqsMessage {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         match self.body.clone() {
-            Some(s) => write!(f, "{}", &s),
+            Some(s) => write!(f, "{s}"),
             None => write!(f, ""),
         }
     }
