@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - deps: update dependency toolkit to v6.6.2(pr [#150])
 - deps: lock file maintenance(pr [#148])
+- deps: update serde packages(pr [#149])
 
 ## [0.3.4] - 2026-07-01
 
@@ -511,6 +512,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#150]: https://github.com/jerus-org/lambda_sqs/pull/150
 [#153]: https://github.com/jerus-org/lambda_sqs/pull/153
 [#148]: https://github.com/jerus-org/lambda_sqs/pull/148
+[#149]: https://github.com/jerus-org/lambda_sqs/pull/149
 [Unreleased]: https://github.com/jerus-org/lambda_sqs/compare/v0.3.4...HEAD
 [0.3.4]: https://github.com/jerus-org/lambda_sqs/compare/v0.3.3...v0.3.4
 [0.3.3]: https://github.com/jerus-org/lambda_sqs/compare/v0.3.2...v0.3.3
