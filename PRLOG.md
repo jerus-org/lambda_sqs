@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - deps: lock file maintenance(pr [#156])
 - deps: update dependency toolkit to v8(pr [#161])
 - deps: lock file maintenance(pr [#158])
+- deps: update rust crate lambda_runtime to 1.4.0(pr [#160])
 
 ## [0.3.5] - 2026-08-09
 
@@ -534,6 +535,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#156]: https://github.com/jerus-org/lambda_sqs/pull/156
 [#161]: https://github.com/jerus-org/lambda_sqs/pull/161
 [#158]: https://github.com/jerus-org/lambda_sqs/pull/158
+[#160]: https://github.com/jerus-org/lambda_sqs/pull/160
 [Unreleased]: https://github.com/jerus-org/lambda_sqs/compare/v0.3.5...HEAD
 [0.3.5]: https://github.com/jerus-org/lambda_sqs/compare/v0.3.4...v0.3.5
 [0.3.4]: https://github.com/jerus-org/lambda_sqs/compare/v0.3.3...v0.3.4
