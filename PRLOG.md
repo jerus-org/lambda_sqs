@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - deps: update dependency toolkit to v7.3.0(pr [#157])
 - deps: lock file maintenance(pr [#156])
+- deps: update dependency toolkit to v8(pr [#161])
 
 ## [0.3.5] - 2026-08-09
 
@@ -530,6 +531,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#155]: https://github.com/jerus-org/lambda_sqs/pull/155
 [#157]: https://github.com/jerus-org/lambda_sqs/pull/157
 [#156]: https://github.com/jerus-org/lambda_sqs/pull/156
+[#161]: https://github.com/jerus-org/lambda_sqs/pull/161
 [Unreleased]: https://github.com/jerus-org/lambda_sqs/compare/v0.3.5...HEAD
 [0.3.5]: https://github.com/jerus-org/lambda_sqs/compare/v0.3.4...v0.3.5
 [0.3.4]: https://github.com/jerus-org/lambda_sqs/compare/v0.3.3...v0.3.4
