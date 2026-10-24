@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - deps: update rust crate serde_json to 1.0.154(pr [#165])
 - deps: update dependency toolkit to v8.0.3(pr [#164])
 - deps: update rust crate lambda_runtime to 1.5.0(pr [#166])
+- deps: update rust crate tokio to 1.54.1(pr [#167])
 
 ## [0.3.6] - 2026-09-24
 
@@ -551,6 +552,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#165]: https://github.com/jerus-org/lambda_sqs/pull/165
 [#164]: https://github.com/jerus-org/lambda_sqs/pull/164
 [#166]: https://github.com/jerus-org/lambda_sqs/pull/166
+[#167]: https://github.com/jerus-org/lambda_sqs/pull/167
 [Unreleased]: https://github.com/jerus-org/lambda_sqs/compare/v0.3.6...HEAD
 [0.3.6]: https://github.com/jerus-org/lambda_sqs/compare/v0.3.5...v0.3.6
 [0.3.5]: https://github.com/jerus-org/lambda_sqs/compare/v0.3.4...v0.3.5
