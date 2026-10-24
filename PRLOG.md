@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - deps: lock file maintenance(pr [#162])
 - deps: update rust crate tokio to v1.53.3 [security](pr [#163])
+- deps: update rust crate serde_json to 1.0.154(pr [#165])
 
 ## [0.3.6] - 2026-09-24
 
@@ -545,6 +546,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#160]: https://github.com/jerus-org/lambda_sqs/pull/160
 [#162]: https://github.com/jerus-org/lambda_sqs/pull/162
 [#163]: https://github.com/jerus-org/lambda_sqs/pull/163
+[#165]: https://github.com/jerus-org/lambda_sqs/pull/165
 [Unreleased]: https://github.com/jerus-org/lambda_sqs/compare/v0.3.6...HEAD
 [0.3.6]: https://github.com/jerus-org/lambda_sqs/compare/v0.3.5...v0.3.6
 [0.3.5]: https://github.com/jerus-org/lambda_sqs/compare/v0.3.4...v0.3.5
