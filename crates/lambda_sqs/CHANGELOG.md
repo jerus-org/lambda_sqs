@@ -5,9 +5,20 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.7] - 2026-10-25
+
+Summary: Fixed[4]
+
+### Fixed
+
+ - fix(deps): update rust crate tokio to 1.54.1
+ - fix(deps): update rust crate lambda_runtime to 1.5.0
+ - fix(deps): update rust crate serde_json to 1.0.154
+ - fix(deps): update rust crate tokio to v1.53.3 [security]
+
 ## [0.3.6] - 2026-09-24
 
-Summary: Fixed[1]
+Summary: Chore[1], Fixed[1]
 
 ### Fixed
 
@@ -116,7 +127,8 @@ Summary: Fixed[19], Security[40]
  - chore(deps): update rust crate lambda_runtime to 0.8.2
  - chore(deps): update rust crate lambda_runtime to 0.8.1
 
-[Unreleased]: https://github.com/jerus-org/lambda_sqs/compare/v0.3.5...HEAD
+[Unreleased]: https://github.com/jerus-org/lambda_sqs/compare/v0.3.6...HEAD
+[0.3.6]: https://github.com/jerus-org/lambda_sqs/compare/v0.3.5...v0.3.6
 [0.3.5]: https://github.com/jerus-org/lambda_sqs/compare/v0.3.4...v0.3.5
 [0.3.4]: https://github.com/jerus-org/lambda_sqs/compare/v0.3.3...v0.3.4
 [0.3.3]: https://github.com/jerus-org/lambda_sqs/compare/v0.3.2...v0.3.3
